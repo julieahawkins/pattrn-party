@@ -1,0 +1,17 @@
+{
+  "name": "pattrn-party",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass-chokidar styles/ -o styles/",
+    "watch-css": "npm run build-css && node-sass-chokidar styles/ -o styles/ --watch --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass-chokidar": "0.0.3"
+  }
+}
