@@ -34,6 +34,57 @@ main section {
       background: #d1d2d3;
       width: 80%;
       height: 2px; }
+  main section .tabs-container {
+    border: 2px solid #d1d2d3;
+    width: 85%;
+    height: 550px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    main section .tabs-container .tabs {
+      padding: 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none; }
+      main section .tabs-container .tabs li {
+        background: #f2f2f2;
+        width: 25%;
+        font-size: 18pt;
+        font-weight: 300;
+        text-align: center;
+        padding: 15px 0;
+        cursor: pointer; }
+      main section .tabs-container .tabs .tab-active {
+        background: #fff; }
+    main section .tabs-container .tab-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 90%; }
+      main section .tabs-container .tab-content .image {
+        width: 400px;
+        height: 400px;
+        border: 2px solid #d1d2d3;
+        background: #f2f2f2; }
+      main section .tabs-container .tab-content .text-container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: 25px; }
+        main section .tabs-container .tab-content .text-container h1 {
+          font-size: 20pt;
+          border-bottom: 2px solid #d1d2d3;
+          padding-bottom: 15px;
+          margin: 25px 0;
+          font-weight: 600; }
+        main section .tabs-container .tab-content .text-container p {
+          margin: 10px 0;
+          font-weight: 300;
+          font-size: 16pt; }
   main section .btn {
     background: #3f3244;
     border: none;
@@ -42,4 +93,5 @@ main section {
     color: #f2f2f2;
     width: 28%;
     align-self: center;
-    padding: 10px; }
+    padding: 10px;
+    margin: 100px; }
