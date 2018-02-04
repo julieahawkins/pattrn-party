@@ -3,8 +3,42 @@
   margin: 0; }
 
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  width: 100vw; }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #2f2235;
-  color: #34d1d1; }
+  color: #f2f2f2;
+  padding: 15px 55px; }
+  header h1 {
+    font-weight: 300; }
+    header h1 span {
+      color: #34d1d1; }
+  header h2 {
+    font-weight: 600; }
+
+main section {
+  display: flex;
+  flex-direction: column; }
+  main section .divider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 55px; }
+    main section .divider h3 {
+      font-weight: 300; }
+    main section .divider .divider-line {
+      background: #d1d2d3;
+      width: 80%;
+      height: 2px; }
+  main section .btn {
+    background: #3f3244;
+    border: none;
+    font-size: 16pt;
+    font-weight: 300;
+    color: #f2f2f2;
+    width: 200px;
+    align-self: center; }

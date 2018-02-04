@@ -6,9 +6,56 @@
 
 body {
   font-family: $font-fam;
+  width: 100vw;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: $purple;
-  color: $teal;
+  color: $lt-grey;
+  padding: 15px 55px;
+  h1 {
+    font-weight: $light;
+    span {
+      color: $teal;
+    }
+  }
+  h2 {
+    font-weight: $heavy;
+  }
+}
+
+main {
+
+  section {
+    display: flex;
+    flex-direction: column;
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 55px;
+      h3 {
+        font-weight: $light;
+      }
+      .divider-line {
+        background: $md-grey;
+        width: 80%;
+        height: 2px;
+      }
+    }
+
+    .btn {
+      background: $muted-purple;
+      border: none;
+      font-size: 16pt;
+      font-weight: $light;
+      color: $lt-grey;
+      width: 200px;
+      align-self: center;
+
+    }
+  }
 }
