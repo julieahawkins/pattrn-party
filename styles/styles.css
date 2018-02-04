@@ -40,5 +40,6 @@ main section {
     font-size: 16pt;
     font-weight: 300;
     color: #f2f2f2;
-    width: 200px;
-    align-self: center; }
+    width: 28%;
+    align-self: center;
+    padding: 10px; }
