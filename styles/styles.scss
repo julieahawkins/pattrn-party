@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: $font-fam;
+}
+
+header {
+  background: $purple;
+  color: $teal;
+}
