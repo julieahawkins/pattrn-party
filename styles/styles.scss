@@ -166,6 +166,9 @@ header {
 }
 
 @media screen and (max-width: 450px) {
+  header {
+    flex-direction: column;
+  }
   .pattern {
     .tabs-container {
       .tab-content {

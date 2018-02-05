@@ -127,5 +127,7 @@ header {
     flex-direction: column; } }
 
 @media screen and (max-width: 450px) {
+  header {
+    flex-direction: column; }
   .pattern .tabs-container .tab-content {
     display: none; } }
