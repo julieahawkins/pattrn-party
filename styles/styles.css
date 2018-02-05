@@ -21,84 +21,21 @@ header {
   header h2 {
     font-weight: 600; }
 
-main section {
+.pattern {
   display: flex;
   flex-direction: column; }
-  main section .divider {
+  .pattern .divider {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 55px; }
-    main section .divider h3 {
+    .pattern .divider h3 {
       font-weight: 300; }
-    main section .divider .divider-line {
+    .pattern .divider .divider-line {
       background: #d1d2d3;
       width: 80%;
       height: 2px; }
-  main section .tabs-container {
-    width: 85%;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    main section .tabs-container .tabs {
-      padding: 0;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-around;
-      list-style: none; }
-      main section .tabs-container .tabs li {
-        border: 2px solid #f2f2f2;
-        border-right: 2px solid #fff;
-        background: #f2f2f2;
-        color: #666;
-        width: 25%;
-        font-size: 18pt;
-        font-weight: 300;
-        text-align: center;
-        padding: 15px 0;
-        cursor: pointer; }
-        main section .tabs-container .tabs li:last-child {
-          border-right: 2px solid #f2f2f2; }
-        main section .tabs-container .tabs li:last-child {
-          border-left: 2px solid #f2f2f2; }
-      main section .tabs-container .tabs li.tab-active {
-        font-weight: 600;
-        border: 2px solid #d1d2d3;
-        border-bottom: 0;
-        background: #fff;
-        z-index: 10; }
-    main section .tabs-container .tab-content {
-      border: 2px solid #d1d2d3;
-      border-top: 2px solid #d1d2d3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%; }
-      main section .tabs-container .tab-content .image {
-        margin: 30px;
-        width: 400px;
-        height: 400px;
-        border: 2px solid #d1d2d3;
-        background: #f2f2f2; }
-      main section .tabs-container .tab-content .text-container {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        margin: 30px; }
-        main section .tabs-container .tab-content .text-container h1 {
-          font-size: 20pt;
-          border-bottom: 2px solid #d1d2d3;
-          padding-bottom: 15px;
-          margin: 25px 0;
-          font-weight: 600; }
-        main section .tabs-container .tab-content .text-container p {
-          margin: 10px 0;
-          font-weight: 300;
-          font-size: 16pt; }
-  main section .btn {
+  .pattern .btn {
     background: #3f3244;
     border: none;
     font-size: 16pt;
@@ -108,3 +45,89 @@ main section {
     align-self: center;
     padding: 10px;
     margin: 100px; }
+  .pattern .tabs-container {
+    width: 85%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+    .pattern .tabs-container .tabs {
+      padding: 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      list-style: none; }
+      .pattern .tabs-container .tabs li {
+        border: 2px solid #f2f2f2;
+        border-right: 2px solid #fff;
+        border-bottom: 0;
+        background: #f2f2f2;
+        color: #666;
+        width: 25%;
+        font-size: 18pt;
+        font-weight: 300;
+        text-align: center;
+        padding: 15px 0;
+        cursor: pointer; }
+        .pattern .tabs-container .tabs li:last-child {
+          border-right: 2px solid #f2f2f2; }
+        .pattern .tabs-container .tabs li:last-child {
+          border-left: 2px solid #f2f2f2; }
+      .pattern .tabs-container .tabs li.active-tab {
+        font-weight: 600;
+        border: 2px solid #d1d2d3;
+        border-bottom: 0;
+        background: #fff;
+        z-index: 10; }
+    .pattern .tabs-container .tab-content {
+      border: 2px solid #d1d2d3;
+      border-top: 2px solid #d1d2d3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%; }
+      .pattern .tabs-container .tab-content .image {
+        margin: 30px;
+        width: 455px;
+        height: 400px;
+        border: 2px solid #d1d2d3;
+        background: #f2f2f2; }
+      .pattern .tabs-container .tab-content .text-container {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 30px; }
+        .pattern .tabs-container .tab-content .text-container h1 {
+          font-size: 20pt;
+          border-bottom: 2px solid #d1d2d3;
+          padding-bottom: 15px;
+          margin: 25px 0;
+          font-weight: 600; }
+        .pattern .tabs-container .tab-content .text-container p {
+          margin: 10px 0;
+          font-weight: 300;
+          font-size: 16pt; }
+    .pattern .tabs-container .tab-content.none {
+      display: none; }
+    .pattern .tabs-container .tab-2 {
+      background-image: url("http://lorempicsum.com/futurama/627/300/4");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+      .pattern .tabs-container .tab-2 .text-container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 5px; }
+
+@media screen and (max-width: 875px) {
+  .pattern .tab-content {
+    flex-direction: column; } }
+
+@media screen and (max-width: 450px) {
+  header {
+    flex-direction: column; }
+  .pattern .tabs-container .tab-content {
+    display: none; } }
