@@ -18,12 +18,16 @@ header {
     font-weight: 300; }
     header h1 span {
       color: #34d1d1; }
+  header .divider-line {
+    display: none; }
   header h2 {
     font-weight: 600; }
 
 .pattern {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 850px;
+  position: relative; }
   .pattern .divider {
     display: flex;
     align-items: center;
@@ -41,54 +45,52 @@ header {
     font-size: 16pt;
     font-weight: 300;
     color: #f2f2f2;
-    width: 28%;
+    width: 300px;
     align-self: center;
     padding: 10px;
-    margin: 100px; }
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px; }
   .pattern .tabs-container {
+    position: relative;
     width: 85%;
     align-self: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between; }
-    .pattern .tabs-container .tabs {
-      padding: 0;
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-around;
-      list-style: none; }
-      .pattern .tabs-container .tabs li {
-        border: 2px solid #f2f2f2;
-        border-right: 2px solid #fff;
-        border-bottom: 0;
-        background: #f2f2f2;
-        color: #666;
-        width: 25%;
-        font-size: 18pt;
-        font-weight: 300;
-        text-align: center;
-        padding: 15px 0;
-        cursor: pointer; }
-        .pattern .tabs-container .tabs li:last-child {
-          border-right: 2px solid #f2f2f2; }
-        .pattern .tabs-container .tabs li:last-child {
-          border-left: 2px solid #f2f2f2; }
-      .pattern .tabs-container .tabs li.active-tab {
-        font-weight: 600;
-        border: 2px solid #d1d2d3;
-        border-bottom: 0;
-        background: #fff;
-        z-index: 10; }
+    .pattern .tabs-container .tab {
+      border: 2px solid #f2f2f2;
+      border-right: 2px solid #fff;
+      border-bottom: 0;
+      background: #f2f2f2;
+      color: #666;
+      width: 25%;
+      font-size: 18pt;
+      font-weight: 300;
+      text-align: center;
+      padding: 15px 0;
+      cursor: pointer; }
+      .pattern .tabs-container .tab:last-child {
+        border-right: 2px solid #f2f2f2; }
+      .pattern .tabs-container .tab:last-child {
+        border-left: 2px solid #f2f2f2; }
+    .pattern .tabs-container .tab.active-tab {
+      font-weight: 600;
+      border: 2px solid #d1d2d3;
+      border-bottom: 0;
+      background: #fff;
+      z-index: 10; }
     .pattern .tabs-container .tab-content {
+      position: absolute;
+      top: 63px;
       border: 2px solid #d1d2d3;
       border-top: 2px solid #d1d2d3;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 100%; }
+      max-height: 700px; }
       .pattern .tabs-container .tab-content .image {
         margin: 30px;
         width: 455px;
@@ -101,7 +103,7 @@ header {
         width: 60%;
         margin: 30px; }
         .pattern .tabs-container .tab-content .text-container h1 {
-          font-size: 20pt;
+          font-size: 18pt;
           border-bottom: 2px solid #d1d2d3;
           padding-bottom: 15px;
           margin: 25px 0;
@@ -109,7 +111,7 @@ header {
         .pattern .tabs-container .tab-content .text-container p {
           margin: 10px 0;
           font-weight: 300;
-          font-size: 16pt; }
+          font-size: 14pt; }
     .pattern .tabs-container .tab-content.none {
       display: none; }
     .pattern .tabs-container .tab-2 {
@@ -122,12 +124,43 @@ header {
         padding: 15px;
         border-radius: 5px; }
 
+@media screen and (max-width: 1020px) {
+  .pattern .btn {
+    margin-bottom: 20px; } }
+
+@media screen and (max-width: 933px) {
+  .pattern .btn {
+    margin-bottom: 10px; } }
+
 @media screen and (max-width: 875px) {
   .pattern .tab-content {
     flex-direction: column; } }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 650px) {
   header {
     flex-direction: column; }
-  .pattern .tabs-container .tab-content {
-    display: none; } }
+    header .divider-line {
+      display: inline-block;
+      background: #666;
+      width: 30%;
+      height: 2px;
+      margin: 20px 0; }
+    header h2 {
+      font-size: 14pt; }
+  .pattern .divider {
+    flex-direction: column; }
+    .pattern .divider .divider-line {
+      width: 30%;
+      margin-top: 15px; } }
+
+@media screen and (max-width: 550px) {
+  .pattern {
+    height: auto;
+    padding-bottom: 50px; }
+    .pattern .tabs-container {
+      flex-direction: column;
+      width: 100%; }
+      .pattern .tabs-container .tab {
+        width: 100%; }
+      .pattern .tabs-container .tab-content {
+        display: none; } }
