@@ -8,6 +8,7 @@
   <body>
     <header>
       <h1>PATTRN <span>PARTY</span></h1>
+      <div class="divider-line"></div>
       <h2>Julie Hawkins</h2>
     </header>
     <main>
@@ -16,14 +17,18 @@
           <h3>ACCORDIAN TABS</h3><div class="divider-line"></div>
         </div>
         <section class="tabs-container">
-          <ul class="tabs">
-            <li class="active-tab">Tab 1</li>
-            <li>Tab 2</li>
-            <li>Tab 3</li>
-            <li>Tab 4</li>
-          </ul>
-          <div class="tab-content tab-1">
-            <image class="image" src="http://lorempicsum.com/futurama/255/200/5"/>
+          <div class="tab active-tab">Tab 1<div class="mobile-open"><div class="mobile-open"></div></div>
+          </div>
+          <div class="tab">Tab 2<div class="mobile-open"><div class="mobile-open"></div></div>
+          </div>
+          <div class="tab">Tab 3<div class="mobile-open"><div class="mobile-open"></div></div>
+          </div>
+          <div class="tab">Tab 4<div class="mobile-open"><div class="mobile-open"></div></div>
+          </div>
+        </section>
+        <section class="tab-content-container">
+          <div class="tab-content" id="tab-1">
+            <image class="image" src="http://lorempicsum.com/futurama/255/200/5" alt="sample image lorempicsum.com"/>
             <div class="text-container">
               <h1>Yes. You gave me a dollar and some candy.</h1>
               <p>Son, as your lawyer, I declare y'all are in a 12-piece bucket o' trouble. But I done struck you a deal: Five hours of community service cleanin' up that ol' mess you caused. The alien mothership is in orbit here. If we can hit that bullseye, the rest of the dominoes will fall like a house of cards. Checkmate</p>
@@ -31,7 +36,7 @@
               <p>Negative, bossy meat creature! I just told you! You've killed me! Fry, you can't just sit here in the dark listening to classical music. And from now on you're all named Bender Jr.</p>
             </div>
           </div>
-          <div class="tab-content tab-2 none">
+          <div class="tab-content none" id="tab-2">
             <div class="text-container">
               <h1>You can crush me but you can't crush my spirit.</h1>
               <p>Who are those horrible orange men? For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs! and if you were the pope they'd be all, "Straighten your pope hat." And "Put on your good vestments." You don't know how to do any of those.</p>
@@ -39,14 +44,14 @@
               <p>I'm Santa Claus! She also liked to shut up! Oh no! The professor will hit me! But if Zoidberg 'fixes' it… then perhaps gifts! You guys go on without me! I'm going to go… look for more stuff to steal!</p>
             </div>
           </div>
-          <div class="tab-content tab-3 none">
+          <div class="tab-content none" id="tab-3">
             <div class="text-container">
               <h1>Bender, quit destroying the universe!</h1>
               <p>With gusto. Doomsday device? Ah, now the ball's in Farnsworth's court! Who's brave enough to fly into something we all keep calling a death sphere? Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes, lined with what would appear to be some sort of cruel muslin and the cute little pom-pom curtain pull cords. Cruel though they may be…</p>
             </div>
             <image class="image" src="http://lorempicsum.com/futurama/350/200/1"/>
           </div>
-          <div class="tab-content tab-4 none">
+          <div class="tab-content none" id="tab-4">
             <image class="image" src="http://lorempicsum.com/futurama/255/200/2"/>
             <div class="text-container">
               <h1>Shut up and take my money!</h1>
@@ -56,13 +61,54 @@
             </div>
           </div>
         </section>
-        <button class="btn" id="accordianTabs">VIEW CODE</button>
+          <button class="btn" id="accordianTabs">
+            <a href="https://codepen.io/jahawkins/pen/BYQZve" target="_blank">VIEW CODE</a>
+          </button>
       </section>
 
       <section class="pattern">
         <div class="divider">
           <h3>FLEXIBLE CARDS</h3><div class="divider-line"></div>
         </div>
+        
+        <section class="Cards-container">
+          <div class="card item-1">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-2">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-3">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-4">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-5">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-6">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+          <div class="card item-7">
+            <h2>Lorem Ipsum</h2>
+            <div class="card-content"> 
+            </div>
+          </div>
+        </section>
+
         <button class="btn" id="flexibleCards">VIEW CODE</button>
       </section>
 
