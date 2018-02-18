@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
   width: 100vw;
 }
 
-header {
+.page-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -306,3 +307,41 @@ header {
   }
 }
 
+// HEADER BAR /////////////////////////////////////////////////////////////
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: $md-grey;
+  font-size: 16pt;
+  font-weight: $light;
+
+  padding: 20px;
+  width: 85%;
+  .header-img {
+    background: $lt-grey;
+    border: 2px solid $drk-grey;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-item {
+      list-style: none;
+      margin: 0 15px;
+    }
+  }
+  .search {
+    border: 2px solid $drk-grey;
+    font-size: 16pt;
+    font-weight: $light;
+
+    padding: 10px;
+  }
+
+}
