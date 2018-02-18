@@ -1,3 +1,5 @@
+// ACCORDIAN TABS /////////////////////////////////////////////////////////////
+
 $('.tab').on('click', changeTab);
 $(window).on('resize', updateTabContent);
 $(window).on('load', updateTabContent);
@@ -5,7 +7,7 @@ $(window).on('load', updateTabContent);
 function changeTab() {
   const tabContentID = $(this).clone().children().remove().end().text().toLowerCase().replace(' ', '-');
 
-  if ($(window).width() < 775 && $(this).hasClass('active-tab')) {
+  if ($(window).width() < 800 && $(this).hasClass('active-tab')) {
     $(this).toggleClass('active-tab');
   } else {
     $('.tab').removeClass('active-tab');
@@ -14,13 +16,13 @@ function changeTab() {
     $(`#${tabContentID}`).removeClass('none');
   }
 
-  if ($(window).width() < 775) {
+  if ($(window).width() < 800) {
     renderMobile(this, tabContentID);
   }
 };
 
 function updateTabContent () {
-  if ($(window).width() < 775) {
+  if ($(window).width() < 800) {
     $('.tab-content-container').appendTo($('.active-tab'));
   } else {
     $('.tabs-container').after($('.tab-content-container'));
@@ -41,3 +43,32 @@ function renderMobile(tab, tabContentID) {
     $(`#${tabContentID}`).addClass('none');
   }
 };
+
+// HEADER BAR /////////////////////////////////////////////////////////////
+
+const openMenu = () => {
+  $('.menu').toggleClass('.open');
+  if ($('.menu').hasClass('.open')) {
+    $('.Header').after($('.header-content'));
+    $('.header-content').css('display', 'flex');
+  } else {
+    $('.header-content').css('display', 'none');
+  }
+};
+
+const updateHeader = () => {
+  if ($(window).width() < 800) {
+    $('.Header').after($('.header-content'));
+    if ($('.menu').hasClass('.open')) {
+      $('.header-content').css('display', 'flex');
+    } else {
+      $('.header-content').css('display', 'none');
+    }
+  } else {
+    $('.header-img').after($('.header-content'));
+    $('.header-content').css('display', 'flex');
+  } 
+}
+
+$(window).on('resize', updateHeader);
+$('.menu').on('click', openMenu);
