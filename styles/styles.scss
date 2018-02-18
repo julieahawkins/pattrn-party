@@ -73,7 +73,7 @@ body {
   // }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 800px) {
   .page-header {
     flex-direction: column;
     .divider-line {
@@ -197,7 +197,7 @@ body {
   }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 800px) {
   .tabs-container {
     flex-direction: column;
     border: 2px solid $md-grey;
@@ -297,7 +297,7 @@ body {
   }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 800px) {
   .Cards-container {
     display: flex;
     flex-direction: column;
@@ -311,16 +311,15 @@ body {
 
 // HEADER BAR /////////////////////////////////////////////////////////////
 .Header-bar {
+  background: $md-grey;
   width: 85%;
   .Header {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
-    background: $md-grey;
     font-size: 16pt;
     font-weight: $light;
-
     padding: 20px;
     .header-img {
       background: $lt-grey;
@@ -331,6 +330,8 @@ body {
     }
     .header-content {
       display: flex;
+      justify-content: space-around;
+      width: 80%;
       .nav-links {
         display: flex;
         align-items: center;
@@ -377,10 +378,10 @@ body {
   }
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 800px) {
   .Header-bar {
     width: 95%;
-    background: $lt-grey;
+    // padding: 0;
     .Header {
       justify-content: space-between;
       .header-content {
@@ -398,6 +399,7 @@ body {
       }
     }
     .header-content {
+      background: $lt-grey;
       flex-direction: column;
       .nav-links {
         padding: 30px;
