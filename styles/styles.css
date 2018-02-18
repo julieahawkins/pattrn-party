@@ -42,16 +42,16 @@ header {
   .pattern .btn {
     background: #3f3244;
     border: none;
+    cursor: pointer;
     color: #f2f2f2;
     font-size: 16pt;
     font-weight: 300;
+    text-align: center;
+    text-decoration: none;
     align-self: center;
     margin: 50px;
     padding: 10px;
     width: 300px; }
-    .pattern .btn a {
-      color: #fff;
-      text-decoration: none; }
 
 .tabs-container {
   display: flex;
@@ -72,6 +72,8 @@ header {
       border-left: 2px solid #f2f2f2; }
     .tabs-container .tab .mobile-open {
       display: none; }
+    .tabs-container .tab:hover {
+      font-weight: 600; }
   .tabs-container .tab.active-tab {
     background: #fff;
     border: 2px solid #d1d2d3;
@@ -167,14 +169,15 @@ header {
         width: 20px; }
         .tabs-container .tab .mobile-open .mobile-open {
           right: 0;
-          top: 0; }
+          top: 0;
+          transform: rotate(90deg); }
     .tabs-container .tab.active-tab {
       border: 2px solid #fff;
       margin: 0;
       padding-bottom: 0;
       z-index: 10; }
-      .tabs-container .tab.active-tab .mobile-open {
-        transform: rotate(90deg); }
+      .tabs-container .tab.active-tab .mobile-open.mobile-open {
+        transform: rotate(180deg); }
       .tabs-container .tab.active-tab .tab-content-container {
         margin: 20px 0 0;
         width: 100%; }
@@ -222,3 +225,11 @@ header {
   .Cards-container .item-7 {
     grid-column-start: 2;
     grid-column-end: 4; }
+
+@media screen and (max-width: 775px) {
+  .Cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%; }
+    .Cards-container .card {
+      margin: 10px 0; } }
