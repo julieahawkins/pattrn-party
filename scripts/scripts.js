@@ -47,12 +47,28 @@ function renderMobile(tab, tabContentID) {
 // HEADER BAR /////////////////////////////////////////////////////////////
 
 const openMenu = () => {
-  $('.nav-links').css('display', 'flex');
-  $('.search-bar').css('display', 'block');
-
-  $('.nav-links').appendTo($('.Header-bar'));
-  $('.search-bar').appendTo($('.Header-bar'));
-
+  $('.menu').toggleClass('.open');
+  if ($('.menu').hasClass('.open')) {
+    $('.Header').after($('.header-content'));
+    $('.header-content').css('display', 'flex');
+  } else {
+    $('.header-content').css('display', 'none');
+  }
 };
 
+const updateHeader = () => {
+  if ($(window).width() < 775) {
+    $('.Header').after($('.header-content'));
+    if ($('.menu').hasClass('.open')) {
+      $('.header-content').css('display', 'flex');
+    } else {
+      $('.header-content').css('display', 'none');
+    }
+  } else {
+    $('.header-img').after($('.header-content'));
+    $('.header-content').css('display', 'flex');
+  } 
+}
+
+$(window).on('resize', updateHeader);
 $('.menu').on('click', openMenu);
