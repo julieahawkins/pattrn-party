@@ -1,3 +1,5 @@
+// ACCORDIAN TABS /////////////////////////////////////////////////////////////
+
 $('.tab').on('click', changeTab);
 $(window).on('resize', updateTabContent);
 $(window).on('load', updateTabContent);
@@ -41,3 +43,16 @@ function renderMobile(tab, tabContentID) {
     $(`#${tabContentID}`).addClass('none');
   }
 };
+
+// HEADER BAR /////////////////////////////////////////////////////////////
+
+const openMenu = () => {
+  $('.nav-links').css('display', 'flex');
+  $('.search-bar').css('display', 'block');
+
+  $('.nav-links').appendTo($('.Header-bar'));
+  $('.search-bar').appendTo($('.Header-bar'));
+
+};
+
+$('.menu').on('click', openMenu);
