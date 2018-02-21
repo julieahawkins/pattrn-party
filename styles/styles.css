@@ -124,7 +124,16 @@ body {
       border: 2px solid #d1d2d3;
       height: 400px;
       margin: 30px;
-      width: 455px; }
+      width: 455px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .tab-content-container .tab-content .tab-1 {
+      background-image: url("http://lorempicsum.com/futurama/255/200/5"); }
+    .tab-content-container .tab-content .tab-3 {
+      background-image: url("http://lorempicsum.com/futurama/350/200/1"); }
+    .tab-content-container .tab-content .tab-4 {
+      background-image: url("http://lorempicsum.com/futurama/255/200/2"); }
     .tab-content-container .tab-content .text-container {
       display: flex;
       flex-direction: column;
@@ -221,7 +230,7 @@ body {
       align-items: center;
       justify-content: center;
       background: #f2f2f2;
-      height: 150px; }
+      height: 250px; }
   .Cards-container .item-1 {
     grid-column-start: 1;
     grid-column-end: 3; }
@@ -249,6 +258,10 @@ body {
     padding: 20px; }
     .Header-bar .Header .header-img {
       background: #f2f2f2;
+      background-image: url(http://lorempicsum.com/futurama/350/200/6);
+      background-repeat: no-repeat;
+      background-size: 200px;
+      background-position: -78px -1px;
       border: 2px solid #666;
       border-radius: 100%;
       min-width: 75px;
@@ -290,7 +303,7 @@ body {
     .Header-bar .Header .menu {
       display: none; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .Header-bar {
     width: 95%; }
     .Header-bar .Header {
