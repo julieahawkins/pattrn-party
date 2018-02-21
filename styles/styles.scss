@@ -161,6 +161,18 @@ body {
       height: 400px;
       margin: 30px;
       width: 455px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .tab-1 {
+      background-image: url('http://lorempicsum.com/futurama/255/200/5');
+    }
+    .tab-3 {
+      background-image: url('http://lorempicsum.com/futurama/350/200/1');
+    }
+    .tab-4 {
+      background-image: url('http://lorempicsum.com/futurama/255/200/2');
     }
     .text-container {
       display: flex;
@@ -282,7 +294,7 @@ body {
       align-items: center;
       justify-content: center;
       background: $lt-grey;
-      height: 150px;
+      height: 250px;
     }
   }
 
@@ -323,6 +335,10 @@ body {
     padding: 20px;
     .header-img {
       background: $lt-grey;
+      background-image: url(http://lorempicsum.com/futurama/350/200/6);
+      background-repeat: no-repeat;
+      background-size: 200px;
+      background-position: -78px -1px;
       border: 2px solid $drk-grey;
       border-radius: 100%;
       min-width: 75px;
@@ -378,10 +394,9 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .Header-bar {
     width: 95%;
-    // padding: 0;
     .Header {
       justify-content: space-between;
       .header-content {
@@ -389,7 +404,6 @@ body {
       }
       .menu {
         display: block;
-        
         color: $drk-grey;
         cursor: pointer;
         font-weight: $light;
@@ -421,7 +435,6 @@ body {
         background: $lt-grey;
         border: 2px solid $drk-grey;
         font-size: 20pt;
-        
         margin: 15px;
         padding-left: 15px;
         .fa-search {
@@ -432,7 +445,6 @@ body {
           border: none;
           font-size: 20pt;
           font-weight: $light;
-
           padding: 10px;
         }
       }

@@ -57,7 +57,7 @@ const openMenu = () => {
 };
 
 const updateHeader = () => {
-  if ($(window).width() < 800) {
+  if ($(window).width() < 900) {
     $('.Header').after($('.header-content'));
     if ($('.menu').hasClass('.open')) {
       $('.header-content').css('display', 'flex');
